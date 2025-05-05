@@ -17,11 +17,10 @@ venom
 function start(client) {
     client.onMessage(async (message) => {
         // Substitua pelo SEU número
-        const allowedNumber = '5511988174313@c.us'; // DDD + número + "@c.us"
+        const allowedNumber = '5511988174313@c.us';
 
         if (
-            message.from === allowedNumber && // só responde esse número
-            !message.isGroupMsg &&
+            message.from === allowedNumber &&
             message.body.startsWith("!")
         ) {
             handleCommand(client, message);
